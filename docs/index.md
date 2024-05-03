@@ -51,6 +51,12 @@ Testing MathJax Formulas
 
 $$ f(x) = \frac{1}{\sigma \sqrt{2\pi} } e^{-\frac{1}{2}\left(\frac{x-\mu}{\sigma}\right)^2} $$
 
+Testing Plotly figures
+
+{% raw %}
+`{% include figures/test.html %}`
+{% endraw %}
+
 Or try
 
 # Heading 1
