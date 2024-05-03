@@ -1,14 +1,10 @@
-### your site title here
+### site title here
 
 title: Adaptive Control
 
 
 ### let's use the minima theme (see https://github.com/jekyll/minima)
 
-theme: minima
-
-
-### exclude the instructions / write-up in the README.md
-
-exclude:
-- README.md
+remote_theme: minima
+plugins:
+- jekyll-remote-theme
