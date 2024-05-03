@@ -54,7 +54,7 @@ $$ f(x) = \frac{1}{\sigma \sqrt{2\pi} } e^{-\frac{1}{2}\left(\frac{x-\mu}{\sigma
 Testing Plotly figures
 
 {% raw %}
-`{% include figures/test.html %}`
+{% include figures/test.html %}
 {% endraw %}
 
 Or try
