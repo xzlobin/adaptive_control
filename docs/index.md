@@ -47,6 +47,10 @@ g = Greeter.new("world")
 g.salute
 ```
 
+Testing MathJax Formulas
+
+$$ f(x) = \frac{1}{\sigma \sqrt{2\pi} } e^{-\frac{1}{2}\left(\frac{x-\mu}{\sigma}\right)^2} $$
+
 Or try
 
 # Heading 1
