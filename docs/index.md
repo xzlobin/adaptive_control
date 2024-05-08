@@ -17,66 +17,50 @@ $$
 kde $\varphi(t)$ [rad] je uhol natočenia lode a táto veličina je výstupnou
 veličinou riadeného systému. Vstupom je uhol vychýlenia kormidla $u(t)$ [rad]. 
 Referenčný model pre URO je v tvare
+$$
 \begin{equation*}
 W_{m}(s)=\frac{k_{m}\cdot Z_{m}(s)}{R_{m}(s)}=\frac{\overbrace{\frac{1}{T_{m}^{2}}}^{k_{m}}\cdot\overbrace{1}^{Z_{m}(s)}}{\underbrace{\left(s+\frac{1}{T_{m}}\right)^{2}}_{R_{m}(s)}},
 \end{equation*}
+$$
+
 kde $k_m$ je vysokofrekvenčné zosilnenie referenčného modelu, $Z_m(s)$ je
 monický Hurwitzov polynóm stupňa 0, $R_m(s)$ je monický Hurwitzov polynóm stupňa
 2, pričom relatívny stupeň $n^\star_m=2$.
 
-Welcome to markdown madness. We hope you **really** enjoy using good old text for writing.
+## Riešenie
 
-Just type some [markdown](http://en.wikipedia.org/wiki/Markdown)
-and jekyll will automatically turn it into hypertext markup language (HTML). *Simple as that.*
+Možno odvodiť prenosovú funkciu systému $\eqref{main_sys}$
+$$
+\begin{equation*}
+\frac{\varphi(s)}{u(s)}=W_p(s)=\frac{\overbrace{\left.\frac{K}{\tau_{1}\tau_{2}\tau_{3}}\right.}^{k_{p}}\overbrace{\left(s+\frac{1}{\tau_{3}}\right)}^{Z_{p}(s)}}{\underbrace{s^{3}+\frac{\tau_{1}+\tau_{2}}{\tau_{1}\tau_{2}}s^{2}+\frac{1}{\tau_{1}\tau_{2}}}_{R_{p}(s)}}=\frac{k_{p}\cdot Z_{p}(s)}{R_{p}(s)}.
+\end{equation*}
+$$
+Podobne ako pre prenosovú funkciu referenčného modelu, $k_p$ je vysokofrekvenčné zosilnenie, $Z_p(s)$ je
+monický Hurwitzov polynóm stupňa 1, $R_p(s)$ je monický Hurwitzov polynóm stupňa
+$n=3$, pričom relatívny stupeň stále $n^\star=2$.
 
-> Quote goes here.
+Všeobecný tvar zákona riadenia, ktorý rieši MRC problém je
+$$
+\begin{equation*}
+u=\Theta_{1}^{\star\top}\frac{\alpha(s)}{\Lambda(s)}u+\Theta_{2}^{\star\top}\frac{\alpha(s)}{\Lambda(s)}\varphi+\Theta_{3}^{\star}\varphi+\Theta_{4}^{\star}r,
+\end{equation*}
+$$
 
-A list:
+$$
+\begin{equation*}
+\alpha=\begin{bmatrix}s^{n-2} & \ldots & s & 1\end{bmatrix}^{\top},\qquad \Lambda(s)=\Lambda_{0}(s)Z_{m}(s),\qquad n=3,
+\end{equation*}
 
-- One
-- Two
-- Three
+$$
+\begin{equation*}
+\Theta_{1}^{\star\top}=\begin{bmatrix}\Theta_{11}^{\star} & \Theta_{12}^{\star}\end{bmatrix},\qquad\Theta_{2}^{\star\top}=\begin{bmatrix}\Theta_{21}^{\star} & \Theta_{22}^{\star}\end{bmatrix}.
+\end{equation*}
+$$
 
-Some inline code `to_html` and a preformatted code block:
-
-```
-Kramdown::Document.new( 'Hello Markdown!' ).to_html
-```
-
-with code highlighting:
-
-``` ruby
-# The Greeter class
-
-class Greeter
-  def initialize(name)
-    @name = name.capitalize
-  end
-
-  def salute
-    puts "Hello #{@name}!"
-  end
-end
-
-# Create a new object
-g = Greeter.new("world")
-
-# Output "Hello World!"
-g.salute
-```
-
-Testing MathJax Formulas
-
-$$ f(x) = \frac{1}{\sigma \sqrt{2\pi} } e^{-\frac{1}{2}\left(\frac{x-\mu}{\sigma}\right)^2} $$
-
-Testing Plotly figures
-
-{% include figures/test.html %}
-
-Or try
-
-# Heading 1
-
-## Heading 2
-
-### Heading 3
+$\Lambda(s)$ je ľubovoľný monický Hurwitzov polynóm stupňa $n - 1 = 2$ obsahujúci $Z_m(s)$ ako faktor. Budeme používať
+$$
+\begin{equation*}
+\Lambda(s)=\left(s+\lambda\right)^{2},\qquad\lambda>0,
+\end{equation*}
+$$
+riešenie MRC problému je definované podmienkami zhody [1]
