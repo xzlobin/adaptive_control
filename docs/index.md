@@ -9,7 +9,7 @@ Je potrebné navrhnúť adaptívny riadiaci systém pre riadenie kurzu nákladne
 
 Systém:
 $$
-\dddot{\varphi}(t)+\left(\frac{\tau_{1}+\tau_{2}}{\tau_{1}\tau_{2}}\right)\ddot{\varphi}(t)+\left(\frac{1}{\tau_{1}\tau_{2}}\right)\dot{\varphi}(t)=\frac{K}{\tau_{1}\tau_{2}}\left(\tau_{3}\dot{u}(t)+u(t)\right),    
+\dddot{\varphi}(t)+\left(\frac{\tau_{1}+\tau_{2}}{\tau_{1}\tau_{2}}\right)\ddot{\varphi}(t)+\left(\frac{1}{\tau_{1}\tau_{2}}\right)\dot{\varphi}(t)=\frac{K}{\tau_{1}\tau_{2}}\left(\tau_{3}\dot{u}(t)+u(t)\right),
 \label{main_sys}
 $$
 kde $\varphi(t)$ [rad] je uhol natočenia lode a táto veličina je výstupnou
